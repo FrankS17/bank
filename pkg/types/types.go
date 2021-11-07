@@ -10,10 +10,19 @@ type Category string
 
 type Ron string
 
+type Status string
+
+const (
+	StatusOk Status = "Ok"
+	StatusFail Status = "FAIL"
+	StatusInProgress Status = "INPROGRESS"
+)
+
 type Payment struct {
 	ID int 
 	Amount Money
 	Category Category
+	Status Status
 	Q2 Ron
 }
 
